@@ -12,6 +12,7 @@ body{
     background-color: #ECF9F7;
     max-width: 980px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 li {
@@ -25,6 +26,7 @@ a {
 p{
     margin-bottom: 0.8rem;
 }
+
 header {
     display:flex;
 }
@@ -34,8 +36,8 @@ header {
 }
 
 .logo img{
-    width: 4rem;
-    margin-top: 0.5rem;
+    width: 3.5rem;
+    margin-top: 1rem;
 }
 
 .navbar{
@@ -44,6 +46,11 @@ header {
 
 .navbar li{
     padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar li:hover{
+    background-color: #C2E8EB;
 }
 
 .navbar a {
@@ -52,30 +59,30 @@ header {
     font-weight: 400;
 }
 
-.navbar a:hover{
-    font-weight: 600;
-}
-
 .about{
     margin: 2rem auto;
     background-color: #C2E8EB;
-    height: 10rem;
+    min-height: 12rem;
     padding: 2rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     border-radius: 5px;
 }
 
 .aboutme{
-    width: 50%;
+    width: 60%;
     padding: 0.8rem;
     background-color: #f5f8f8;
+    overflow-y: scroll;
 }
 
 .photo{
     background-image: url("../images/photo.jpg");
     background-size: 11rem;
-    width: 11rem;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
     border-radius: 5px;
 
 }
@@ -88,6 +95,10 @@ header {
     background-color: #C2E8EB;
     padding: 2rem;
     border-radius: 5px;
+}
+
+.tableContainer {
+    width: 100%;
 }
 
 table {
@@ -116,7 +127,9 @@ table img{
 }
 
 .skill_content {
-    margin-left: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
 }
 
 #projects {
@@ -127,5 +140,34 @@ table img{
 }
 
 .project_content{
-    margin-left: 4.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_content li{
+    padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 650px){
+    .navbar{
+       display: none;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+    .aboutme{
+        width:90%;
+    }
+
+    .photo {
+        position: absolute;
+        top: 6rem;
+        right: 2rem;
+        height: 8rem;
+        width: 8rem;
+        background-position: center;
+        border-radius: 50%;
+
+    }
 }
